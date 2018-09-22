@@ -17,40 +17,37 @@ function setup() {
     createCanvas(400, 400);
 }
 
-var x = 30;
-var y = 60;
-var changeInX = 3;
-
-
 function draw() {
-    background(220);
+    background(240);
     noStroke();
+    strokeCap(SQUARE);
 
-    ellipse(x, 200, 60);
-    fill(255, 0, 0)
+    // blue square
+    fill(0, 0, 255);
+    rect(360, 300, 40, 100);
 
-    x = x + changeInX;
+    // red square
+    fill(255, 0, 0);
+    rect(0, 0, 150, 230);
 
-    if (x > width) {
-        changeInX = -3;
-    }
+    // yellow square
+    fill(255, 255, 0);
+    rect(150, 380, 110, 30);
 
-    if (x < 0) {
-        changeInX = 3;
-    }
-  
-    ellipse(x+100, 300, 40);
-    fill(0, 255, 0)
+    stroke(0);
+    strokeWeight(10);
+    line(150, 0, 150, 400);     // left line
+    line(0, 230, 400, 230);   // middle line
+    line(360, 230, 360, 400); // right
 
-    x = x + changeInX;
+    strokeWeight(10);
+    line(150, 380, 360, 380); // bottom
 
-    if (x > width) {
-        changeInX = -3;
-    }
-
-    if (x < 0) {
-        changeInX = 3;
-    }
+    strokeWeight(10);
+    line(360, 300, 400, 300);
+    
+      strokeWeight(10);
+    line(260, 380, 260, 400);
 }
 
 </script>
